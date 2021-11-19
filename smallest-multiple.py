@@ -1,8 +1,8 @@
-from datetime import datetime
-startTime = datetime.now()
-
 # 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+from datetime import datetime
+startTime = datetime.now()
 
 divisor_max = 20        # find number divisible by all numbers from 1 to this variable
 increment = 2520        
