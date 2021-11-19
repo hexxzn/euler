@@ -18,9 +18,10 @@ print("( 1 ) 2")
 while prime < prime_number_to_find:
     if is_prime(test_number):
         prime += 1
-        print("(",prime,")",test_number)
+        
     test_number += 2
 
+print("(",prime,")",test_number)
 print(datetime.now() - startTime)
 
 # # # # # # # # # #
