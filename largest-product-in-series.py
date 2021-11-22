@@ -10,7 +10,7 @@ single_digit = 0
 product = 1
 largest_product = 0
 
-def list_product(list_name):    # calculates the product of 13 digist slice
+def list_product(list_name):    # calculates the product of 13 digit slice
     global product
     product = 1
     for i in range(0, len(list_name)):
