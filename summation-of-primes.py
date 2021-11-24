@@ -3,7 +3,7 @@
 
 integers = [2, 3]
 prime = 3
-cap = 200
+cap = 200000
 
 for i in range(5, cap, 2):   # create starter list
     integers.append(i)
