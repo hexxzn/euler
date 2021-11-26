@@ -4,27 +4,27 @@
 from datetime import datetime
 startTime = datetime.now()
 
-test_number = 3
-prime = 1
-prime_number_to_find = 10001
+def nth_prime(n):
+    primes = [2]
+    test = 3
+    while True:
+        for i in range(2, test):
+            if test % i == 0 :
+                break
+            if i >= test ** 0.5:
+                primes.append(test)
+                break
 
-def is_prime(num):
-    for i in range(2, num-1):
-        if num % i == 0:
-            return False
-    return True
+        if len(primes) == n:
+            return primes[n-1]
 
-print("( 1 ) 2")
-while prime < prime_number_to_find:
-    if is_prime(test_number):
-        prime += 1
-        
-    test_number += 2
+        test += 2
 
-print("(",prime,")",test_number)
+
+print(nth_prime(10001))
 print(datetime.now() - startTime)
 
 # # # # # # # # # #
-# Answer: 104745  #
-# Time: 43.411    #
+# Answer: 104743  #
+# Time: 0.753     #
 # # # # # # # # # #
