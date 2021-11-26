@@ -20,7 +20,6 @@ def nth_prime(n):
 
         test += 2
 
-
 print(nth_prime(10001))
 print(datetime.now() - startTime)
 
