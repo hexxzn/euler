@@ -21,7 +21,6 @@ def sequence(limit):
                 dict[i] += 1
     return max(dict, key=dict.get)
 
-
 print(sequence(1000000))
 print(datetime.now() - startTime)
 
