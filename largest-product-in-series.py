@@ -10,7 +10,7 @@ single_digit = 0
 product = 1
 largest_product = 0
 
-def list_product(list_name):    # calculates the product of 13 digit slice
+def list_product(list_name):   # calculates the product of 13 digit slice
     global product
     product = 1
     for i in range(0, len(list_name)):
@@ -18,7 +18,7 @@ def list_product(list_name):    # calculates the product of 13 digit slice
         product *= single_digit
     return product
 
-for i in range(0, 988):         # feeds all possible 13 digit slices to list_product function
+for i in range(0, 988):   # feeds all possible 13 digit slices to list_product function
     thirteen_digits = thousand_digits[i:i+13]
     if list_product(thirteen_digits) > largest_product:
         largest_product = list_product(thirteen_digits)
