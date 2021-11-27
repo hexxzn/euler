@@ -1,7 +1,6 @@
 ### Problem 10
 ### https://projecteuler.net/problem=10
 
-import math
 from datetime import datetime
 startTime = datetime.now()
 
@@ -15,10 +14,11 @@ def prime_sum(limit):
         for i in range(p, limit):
             if p * i in primes:
                 primes.remove(p * i)
+            if p * i >= limit:
+                break
 
         for i in range(1, limit):
             if p + i in primes:
-                print(math.floor((p / limit ** 0.5) * 100), "%")
                 p = p + i
                 break
             elif p * p >= limit:
@@ -29,5 +29,5 @@ print(datetime.now() - startTime)
 
 # # # # # # # # # # # # #
 # Answer: 142913828922  #
-# Time: 1:26.522        #
+# Time: 0:01.871        #
 # # # # # # # # # # # # #
