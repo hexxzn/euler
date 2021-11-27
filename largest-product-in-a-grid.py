@@ -43,7 +43,7 @@ for row in range(3, 20):   # diagonal sweep 2
 print(largest_product)
 print(datetime.now() - startTime)
 
-# # # # # # # # # # # # #
-# Answer: 70600674      #
-# Time: 0.001           #
-# # # # # # # # # # # # #
+# # # # # # # # # # #
+# Answer: 70600674  #
+# Time: 0:00.001    #
+# # # # # # # # # # #

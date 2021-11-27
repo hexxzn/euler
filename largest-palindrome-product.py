@@ -19,5 +19,5 @@ print(datetime.now() - startTime)
 
 # # # # # # # # # #
 # Answer: 906609  #
-# Time: 0.552     #
+# Time: 0:00.552  #
 # # # # # # # # # #

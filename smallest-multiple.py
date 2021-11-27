@@ -21,7 +21,7 @@ while not divisible(dividend):
 print(dividend)
 print(datetime.now() - startTime)
 
-# # # # # # # # # # # #
-# Answer: 232792560   #
-# Time: 0.293         #
-# # # # # # # # # # # #
+# # # # # # # # # # #
+# Answer: 232792560 #
+# Time: 0:00.293    #
+# # # # # # # # # # #

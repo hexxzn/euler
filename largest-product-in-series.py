@@ -26,7 +26,7 @@ for i in range(0, 988):         # feeds all possible 13 digit slices to list_pro
 print("largest product of thirteen digits =",largest_product)
 print(datetime.now() - startTime)
 
-# # # # # # # # # # # # #
-# Answer: 23514624000   #
-# Time: 0.003           #
-# # # # # # # # # # # # #
+# # # # # # # # # # # #
+# Answer: 23514624000 #
+# Time: 0:00.003      #
+# # # # # # # # # # # #

@@ -17,7 +17,7 @@ while(dividend < number):               # This loop is essentially building a fa
 print(int(number))
 print(datetime.now() - startTime)
 
-# # # # # # # # #
-# Answer: 6857  #
-# Time: 0.002   #
-# # # # # # # # #
+# # # # # # # # # #
+# Answer: 6857    #
+# Time: 0:00.002  #
+# # # # # # # # # #

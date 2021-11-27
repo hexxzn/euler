@@ -1,27 +1,33 @@
 ### Problem 10
 ### https://projecteuler.net/problem=10
 
-integers = [2, 3]
-prime = 3
-cap = 200000
+import math
+from datetime import datetime
+startTime = datetime.now()
 
-for i in range(5, cap, 2):   # create starter list
-    integers.append(i)
+def prime_sum(limit):
+    primes = set()
+    for i in range(2, limit):
+        primes.add(i)
 
-while True:
-    for i in range(prime, max(integers), 2):   # remove non-prime integers
-        nonprime = i * prime
-        if nonprime > max(integers):
-            continue
-        elif nonprime in integers:
-            integers.remove(nonprime)
+    p = 2
+    while True:
+        for i in range(p, limit):
+            if p * i in primes:
+                primes.remove(p * i)
 
-    # print(prime)
+        for i in range(1, limit):
+            if p + i in primes:
+                print(math.floor((p / limit ** 0.5) * 100), "%")
+                p = p + i
+                break
+            elif p * p >= limit:
+                return sum(primes)
 
-    if integers.index(prime) + 1 < len(integers):
-        prime = integers[integers.index(prime) + 1]
-    else:
-        break
+print(prime_sum(2000000))
+print(datetime.now() - startTime)
 
-print(integers)
-print("Sum:", str(sum(integers)))
+# # # # # # # # # # # # #
+# Answer: 142913828922  #
+# Time: 1:26.522        #
+# # # # # # # # # # # # #

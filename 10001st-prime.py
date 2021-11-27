@@ -14,16 +14,14 @@ def nth_prime(n):
             if i >= test ** 0.5:
                 primes.append(test)
                 break
-
         if len(primes) == n:
             return primes[n-1]
-
         test += 2
 
 print(nth_prime(10001))
 print(datetime.now() - startTime)
 
-# # # # # # # # # #
+# # # # # # # # # # 
 # Answer: 104743  #
-# Time: 0.753     #
+# Time: 0:00.753  #
 # # # # # # # # # #
