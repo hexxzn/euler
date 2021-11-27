@@ -1,15 +1,28 @@
 ### Problem 12
 ### https://projecteuler.net/problem=12
 
-import math
+from datetime import datetime
+startTime = datetime.now()
 
-def divisibility(number):
-    number = 0
-    n = 1
-    largest_divisor = 1
+def divisors(n):
+    count = 1
+    triangle = 0
+    while True:
+        divisors = 0
+        triangle += count
+        count += 1
+        for i in range(1, triangle):
+            if i > triangle / 2:
+                break
+            if triangle % i == 0:
+                divisors += 1
+                if divisors > n:
+                    return triangle
 
-    while True:   # generate triangle numbers
-        number += n
-        n += 1
+print(divisors(100))
+print(datetime.now() - startTime)
 
-print(divisibility(144))
+# # # # # #
+# Answer: #
+# Time:   #
+# # # # # #
