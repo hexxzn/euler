@@ -21,7 +21,7 @@ def prime_sum(limit):
             if p + i in primes:
                 p = p + i
                 break
-            elif p * p >= limit:
+            if p * p >= limit:
                 return sum(primes)
 
 print(prime_sum(2000000))
@@ -29,5 +29,5 @@ print(datetime.now() - startTime)
 
 # # # # # # # # # # # # #
 # Answer: 142913828922  #
-# Time: 0:01.871        #
+# Time: 0:01.761        #
 # # # # # # # # # # # # #
