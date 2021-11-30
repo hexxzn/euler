@@ -10,9 +10,7 @@ def factor(number):
     while dividend < number:
         if number % dividend == 0:
             number = number / dividend
-            dividend += 1
-        else:
-            dividend += 1
+        dividend += 1
 
     return int(number)
 
