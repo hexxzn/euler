@@ -4,17 +4,19 @@
 from datetime import datetime
 startTime = datetime.now()
 
-number = 600851475143
-dividend = 1
+def factor(number):
+    dividend = 1
 
-while(dividend < number):               # This loop is essentially building a factor tree
-    if number % dividend == 0:          # Number and dividend become branches of the factor tree
-        number = number / dividend
-        dividend += 1
-    else:
-        dividend += 1
+    while dividend < number:
+        if number % dividend == 0:
+            number = number / dividend
+            dividend += 1
+        else:
+            dividend += 1
 
-print(int(number))
+    return int(number)
+
+print(factor(600851475143))
 print(datetime.now() - startTime)
 
 # # # # # # # # # #

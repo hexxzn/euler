@@ -4,19 +4,23 @@
 from datetime import datetime
 startTime = datetime.now()
 
-fibonacci1 = 1      # previous term in sequence
-fibonacci2 = 2      # current term in sequence
-fibonacci3 = 0      # placeholder
-sum = 0             # sum of even-valued terms
+def evensum(limit):
+    sequence = [1, 2]
+    sum = 0
 
-while fibonacci2 < 4000000:
-    if fibonacci2 % 2 == 0:
-        sum += fibonacci2
-    fibonacci3 = fibonacci1 + fibonacci2
-    fibonacci1 = fibonacci2
-    fibonacci2 = fibonacci3
+    while sequence[-1] < limit:
+        sequence.append(sequence[-1] + sequence[-2])
 
-print(sum)
+    if sequence[-1] > limit:
+        del sequence[-1]
+
+    for element in sequence:
+        if element % 2 == 0:
+            sum += element
+
+    return sum
+
+print(evensum(4000000))
 print(datetime.now() - startTime)
 
 # # # # # # # # # #
