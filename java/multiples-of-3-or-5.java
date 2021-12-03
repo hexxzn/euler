@@ -4,7 +4,7 @@
 import java.time.Duration;
 import java.time.Instant;
 
-class Main {
+class Problem1 {
     public static void main(String[] args) {
         Instant startTime = Instant.now();
         multipleSum(1000);
@@ -28,6 +28,5 @@ class Main {
 
 ////////////////////
 // Answer: 233168 //
-// Time: 0:00.000 //
+// Time: 0:00.001 //
 ////////////////////
-
