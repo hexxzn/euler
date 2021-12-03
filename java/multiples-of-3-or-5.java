@@ -6,16 +6,13 @@ import java.time.Instant;
 
  class Main {
     public static void main(String[] args) {
-
-            Instant startTime = Instant.now();
-            multipleSum(1000);
-            System.out.println(Duration.between(startTime, Instant.now()).toString());
+        Instant startTime = Instant.now();
+        multipleSum(1000);
+        System.out.println(Duration.between(startTime, Instant.now()).toString());
     }
 
     public static void multipleSum(int limit) {
-
         int sum = 0;
-
         for(int i = 1; i < limit; i++) {
             if(i % 3 == 0) {
                 sum += i;
@@ -25,7 +22,6 @@ import java.time.Instant;
                 sum += i;
             }
         }
-
         System.out.println(sum);
     }
 }
