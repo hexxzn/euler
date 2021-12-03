@@ -4,7 +4,7 @@
 import java.time.Duration;
 import java.time.Instant;
 
- class Main {
+class Main {
     public static void main(String[] args) {
         Instant startTime = Instant.now();
         multipleSum(1000);
