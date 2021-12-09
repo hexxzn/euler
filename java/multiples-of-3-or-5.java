@@ -1,4 +1,4 @@
-// Problem 11
+// Problem 1
 // https://projecteuler.net/problem=1
 
 import java.time.Duration;
