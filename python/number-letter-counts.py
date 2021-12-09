@@ -13,7 +13,7 @@ def letter_count(exp):
     for i in range(1, exp + 1):
         number = i
         digits = [int(a) for a in str(number)]
-        if len(digits) == 3:
+        if len(digits) == 3:   # hundreds
             output = ones[digits[0]] + "hundred"
             if digits[1] == 0 and digits[2] == 0:
                 numstring += output
@@ -34,7 +34,7 @@ def letter_count(exp):
                 else:
                     output += "and" + tens[digits[1]] + ones[digits[2]]
                     numstring += output
-        elif len(digits) == 2:
+        elif len(digits) == 2:   # tens
             if digits[0] == 1:
                 output = teens[int(str(digits[0])+str(digits[1]))]
                 numstring += output
@@ -44,13 +44,11 @@ def letter_count(exp):
             else:
                 output = tens[digits[0]] + ones[digits[1]]
                 numstring += output
-        elif len(digits) == 1:
+        elif len(digits) == 1:   # ones
             output = ones[digits[0]]
             numstring += output
 
     return(len(numstring))
-
-
 
 print(letter_count(1000))
 print(datetime.now() - startTime)
