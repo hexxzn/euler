@@ -2,8 +2,8 @@
 ### https://projecteuler.net/problem=15
 
 from datetime import datetime
-startTime = datetime.now()
 from math import factorial
+startTime = datetime.now()
 
 def paths(m, n):
     return int(factorial(m + n) / (factorial(m) * factorial((m + n) - m)))
