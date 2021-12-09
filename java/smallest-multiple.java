@@ -28,7 +28,6 @@ class Problem5 {
         }
         System.out.println(answer);
     }
-    
 }
 
 ///////////////////////
