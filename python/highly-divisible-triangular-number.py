@@ -1,4 +1,4 @@
-### Problem 121
+### Problem 12
 ### https://projecteuler.net/problem=12
 
 from datetime import datetime
