@@ -4,24 +4,21 @@
 from datetime import datetime
 startTime = datetime.now()
 
-divisor_max = 20        # find number divisible by all numbers from 1 to this variable
-increment = 2520        
-dividend = 2520         # set to same as increment
+def divisibility(limit):   # return the first number evenly divisible by all numbers from 1 to limit
+    number = 2520
+    increment = 2520
+    while True:
+        for i in range(1, limit + 1):
+            if number % i != 0:
+                break
+            if i == limit:
+                return number
+        number += increment
 
-def divisible(test_number):
-    for i in range(1, divisor_max+1):
-        if test_number % i != 0:
-            return False
-    return True
-
-while not divisible(dividend):
-    dividend += increment
-    divisible(dividend)
-
-print(dividend)
+print(divisibility(20))
 print(datetime.now() - startTime)
 
 # # # # # # # # # # #
 # Answer: 232792560 #
-# Time: 0:00.293    #
+# Time: 0:00.049    #
 # # # # # # # # # # #
