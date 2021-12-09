@@ -5,8 +5,8 @@ from datetime import datetime
 from math import factorial
 startTime = datetime.now()
 
-def paths(m, n):
-    return int(factorial(m + n) / (factorial(m) * factorial((m + n) - m)))
+def paths(rows, columns):
+    return int(factorial(rows + columns) / (factorial(rows) * factorial((rows + columns) - rows)))
 
 print(paths(20, 20))
 print(datetime.now() - startTime)
