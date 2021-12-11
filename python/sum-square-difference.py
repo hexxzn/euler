@@ -4,24 +4,22 @@
 from datetime import datetime
 startTime = datetime.now()
 
-limit = 100
-
-def sum_of_squares(limit):
+def difference(limit):
     limit += 1
+    
     sum = 0
     for i in range(1, limit):
         sum += (i ** 2)
-    return sum
+    sum_squares = sum
 
-def square_of_sums(limit):
-    limit += 1
     sum = 0
     for i in range(1, limit):
         sum += i
-    square = (sum ** 2)
-    return square
+    square_sums = (sum ** 2)
 
-print(square_of_sums(limit)-sum_of_squares(limit))
+    return square_sums - sum_squares
+
+print(difference(100))
 print(datetime.now() - startTime)
 
 # # # # # # # # # # #
