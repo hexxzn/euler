@@ -24,7 +24,7 @@ def pathSum(strTriangle):
         triangle.append(list[0:i])
         del list[0:i]
 
-    for i in range(len(triangle)-2, -1, -1):   # find maximum path sum by from bottom to top by combining second to last row values with largest adjacent values below
+    for i in range(len(triangle)-2, -1, -1):   # find maximum path sum from bottom to top by combining second to last row values with largest adjacent values below
         collapse = []
         for j in range(0, len(triangle[i])):
             if triangle[i][j] + triangle[i+1][j] > triangle[i][j] + triangle[i+1][j+1]:
