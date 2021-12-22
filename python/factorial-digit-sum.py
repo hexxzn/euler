@@ -8,7 +8,7 @@ startTime = datetime.now()
 def digitSum(limit):
     list = []
     factorial = math.factorial(limit)   # compute factorial
-    strFactorial = str(factorial)   # convert factorial to strong
+    strFactorial = str(factorial)   # convert factorial to string
     for i in range(len(strFactorial)):
         list.append(int(strFactorial[i]))   # separate digits and append each to list
     return sum(list)   # return sum of list elements
