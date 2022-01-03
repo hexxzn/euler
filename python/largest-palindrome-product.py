@@ -9,7 +9,7 @@ def largest_palindrome(length):
     for x in range(1, int("9" * length) + 1):             
         for y in range(1, int("9" * length) + 1):           
             result = x * y      
-            if str(result) == str(result)[::-1] and result > palindrome:    # if result is palindrome and result is larger than largest palindrome, palindrome = result
+            if str(result) == str(result)[::-1] and result > palindrome:
                 palindrome = result
     return palindrome
 

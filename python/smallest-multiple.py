@@ -4,7 +4,7 @@
 from datetime import datetime
 startTime = datetime.now()
 
-def divisibility(limit):   # return the first number evenly divisible by all numbers from 1 to limit
+def divisibility(limit):
     number = 2520
     increment = 2520
     while True:

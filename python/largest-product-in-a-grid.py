@@ -9,7 +9,7 @@ grid_list = list(map(int, grid_values.split()))
 matrix = []
 largest_product = 0
 
-for i in range(0, 400, 20):   # create matrix
+for i in range(0, 400, 20):
     matrix += [grid_list[i:i+20]]
 
 for row in range(0, 20):   # horizontal sweep

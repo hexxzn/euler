@@ -4,23 +4,18 @@
 from datetime import datetime
 startTime = datetime.now()
 
-a = 1
-b = 1
-c = 1
+def pythagorean_triplet():
+    c = 1
+    for a in range(500):
+        for b in range(a, 500):
+            c = a ** 2 + b ** 2
+            if (a + b) + (c ** 0.5) == 1000:
+                return int(a * b * (c ** 0.5))
 
-for i in range(1, 500):
-    a += 1
-    b = 1
-    for i in range(1, 500):
-        b += 1
-        c = a ** 2 + b ** 2
-        if (a + b) + (c ** 0.5) == 1000:
-            print(a, b, c)
-            print("product =", a * b * (c ** 0.5))
-
+print(pythagorean_triplet())
 print(datetime.now() - startTime)
 
-# # # # # # # # # # # # #
-# Answer: 200, 375, 425 #
-# Time: 0:00.195        #
-# # # # # # # # # # # # #
+# # # # # # # # # # #
+# Answer: 31875000  #
+# Time: 0:00.055    #
+# # # # # # # # # # #
