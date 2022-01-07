@@ -17,8 +17,9 @@ def is_palindrome(test_number):
         return True
     return False
 
-def is_pandigital(number):
-    for i in range(1, 9 + 1):
+def is_pandigital(number):   # takes string input
+    n = len(number)
+    for i in range(1, n + 1):
         iterations = [m.start() for m in re.finditer(str(i), number)]
         if len(iterations) != 1:
             return False
