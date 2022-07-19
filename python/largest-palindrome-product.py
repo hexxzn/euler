@@ -1,22 +1,15 @@
-### Problem 4
-### https://projecteuler.net/problem=4
+# https://projecteuler.net/problem=4
 
-from datetime import datetime
-startTime = datetime.now()
+length = 3  # Length, in digits, of numbers to multiply
+lower = int("1" + ("0" * (length - 1)))  # Lower bound of numbers to multiply
+upper = int("1" + ("0" * length))  # Upper bound of numbers to multiply
+largest_palindrome = 0
 
-def largest_palindrome(length):
-    palindrome = 0
-    for x in range(1, int("9" * length) + 1):             
-        for y in range(1, int("9" * length) + 1):           
-            result = x * y      
-            if str(result) == str(result)[::-1] and result > palindrome:
-                palindrome = result
-    return palindrome
+for x in range(lower, upper):
+    for y in range(lower, upper): 
+        product = x * y
+        if str(product) == str(product)[::-1]:  # If product is a palindrome
+            if product > largest_palindrome:  # If product is larger than previous palindrome
+                largest_palindrome = product
 
-print(largest_palindrome(3))
-print(datetime.now() - startTime)
-
-# # # # # # # # # #
-# Answer: 906609  #
-# Time: 0:00.326  #
-# # # # # # # # # #
+print(f'The largest palindrome made from the product of two {length}-digit numbers is {largest_palindrome}.')
