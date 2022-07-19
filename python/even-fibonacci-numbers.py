@@ -1,29 +1,15 @@
-### Problem 2
-### https://projecteuler.net/problem=2
+# https://projecteuler.net/problem=2
 
-from datetime import datetime
-startTime = datetime.now()
+limit = 4000000  # Do not consider Fibonacci sequence terms greater than this number
+a, b, c = 0, 1, 2  # First three terms in Fibonacci sequence
+sum = 0
 
-def evensum(limit):
-    sequence = [1, 2]
-    sum = 0
+while b <= limit:
+    a = b  # a becomes b
+    b = c  # b becomes c
+    c = a + b  # c becomes the sum of a and b
 
-    while sequence[-1] < limit:
-        sequence.append(sequence[-1] + sequence[-2])
+    if a % 2 == 0:  # If a is even
+        sum += a  # Add to sum
 
-    if sequence[-1] > limit:
-        del sequence[-1]
-
-    for element in sequence:
-        if element % 2 == 0:
-            sum += element
-
-    return sum
-
-print(evensum(4000000))
-print(datetime.now() - startTime)
-
-# # # # # # # # # #
-# Answer: 4613732 #
-# Time: 0:00.001  #
-# # # # # # # # # #
+print(f'The sum of the even-valued terms whose values do not exceed {limit}, is {sum}.')

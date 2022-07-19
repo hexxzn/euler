@@ -1,23 +1,12 @@
-### Problem 3
-### https://projecteuler.net/problem=3
+# https://projecteuler.net/problem=3
 
-from datetime import datetime
-startTime = datetime.now()
+target = 600851475143  # Find the largest prime factor of this number
+dividend = target
+divisor = 1
 
-def factor(number):
-    dividend = 1
+while divisor < dividend:
+    if dividend % divisor == 0:  # If divisor is a factor of target
+        dividend = int(dividend / divisor)  # Result (target) is always prime
+    divisor += 1
 
-    while dividend < number:
-        if number % dividend == 0:
-            number = number / dividend
-        dividend += 1
-
-    return int(number)
-
-print(factor(600851475143))
-print(datetime.now() - startTime)
-
-# # # # # # # # # #
-# Answer: 6857    #
-# Time: 0:00.002  #
-# # # # # # # # # #
+print(f'The largest prime factor of {target} is {dividend}.')
