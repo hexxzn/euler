@@ -2,7 +2,7 @@ public class Euler1 {
     // https://projecteuler.net/problem=1
     
     public static void main(String[] args) {
-        System.out.println("The sum of all multiples of 3 or 5 below 1000 is " + multipleSum() + ".");
+        System.out.printf("The sum of all multiples of 3 or 5 below 1000 is %d.", multipleSum());
     }
 
     public static int multipleSum() {
@@ -13,7 +13,7 @@ public class Euler1 {
                 sum += n;
             }
         }
-        
+
         return sum;
      }
 }
