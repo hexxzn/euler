@@ -2,6 +2,10 @@ public class Euler2 {
     // https://projecteuler.net/problem=2
     
     public static void main(String[] args) {
+        System.out.print("The sum of the even-valued terms whose values do not exceed 4,000,000 is " + fibonacciSum() + ".");
+    }
+
+    public static int fibonacciSum() {
         int a = 0, b = 1, c = 2;
         int sum = 0;
 
@@ -15,6 +19,6 @@ public class Euler2 {
             }
         }
 
-        System.out.print(sum);
+        return sum;
     }
 }
